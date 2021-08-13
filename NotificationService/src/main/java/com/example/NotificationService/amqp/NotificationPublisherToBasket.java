@@ -22,8 +22,9 @@ public class NotificationPublisherToBasket {
 
     public void publishNotificationMessage(ProductPriceChangeMessage priceChangeMessage){
         var message = new ProductPriceChangeMessage();
-       // message.setId(notification.getId());
+
         message.setProductId(priceChangeMessage.getProductId());
+        message.setProductName(priceChangeMessage.getProductName());
         message.setOldPrice(priceChangeMessage.getOldPrice());
         message.setNewPrice(priceChangeMessage.getNewPrice());
         System.out.println("*****"+message);

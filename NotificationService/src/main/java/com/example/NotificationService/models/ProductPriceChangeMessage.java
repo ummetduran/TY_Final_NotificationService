@@ -9,6 +9,7 @@ public class ProductPriceChangeMessage implements Serializable {
 
 
     private Long productId;
+    private String productName;
     private Double oldPrice;
 
     private Double newPrice;
@@ -16,9 +17,10 @@ public class ProductPriceChangeMessage implements Serializable {
     @Override
     public String toString() {
         return "ProductPriceChangeMessage{" +
-                ", productId=" + productId +
-                ", oldPrice=" + oldPrice +
-                ", newPrice=" + newPrice +
+                ", productId= " + productId +
+                ",productName= "+ productName+
+                ", oldPrice = " + oldPrice +
+                ", newPrice= " + newPrice +
                 '}';
     }
 }
